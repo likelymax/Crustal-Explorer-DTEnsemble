@@ -62,19 +62,6 @@ int main (int argc, char **argv) {
             }
         }  
         newdp = slope(velocity, output, lon, lat, alpha1, alpha2, cdp);      
-    }else if (strcmp(type, "slope_2") == 0){
-        printf("type is %s\n", type);
-        float lon_max, lon_min, lat_max, lat_min;
-        int dir;
-        for (i=1; !error && i < argc; i++) {
-            if (argv[i][0] == '-') {
-                if (argv[i][1] == 'T'){
-                    sscanf(&argv[i][2],"%f/%f/%f/%f/%f/%f/%f/%f/%f/%d\n", &alpha1, &up, &down, &lon_min, &lat_min, &lon_max, &lat_max, &lon, &lat, &dir);
-                }
-            }
-        }  
-        newdp = slope_2(velocity, output, lon_min, lat_min, lon_max, lat_max, lon, lat, alpha1, up, down, dir);      
-
     }else if (strcmp(type, "antiform") == 0){
         printf("type is %s\n", type);
         for (i=1; !error && i < argc; i++) {
@@ -85,16 +72,6 @@ int main (int argc, char **argv) {
             }
         }  
         newdp = antiform(velocity, output, lon, lat, down, r);
-    }else if (strcmp(type, "antiform_2") == 0){
-        printf("type is %s\n", type);
-        for (i=1; !error && i < argc; i++) {
-            if (argv[i][0] == '-') {
-                if (argv[i][1] == 'T'){
-                    sscanf(&argv[i][2],"%f/%f/%f/%f/%f\n", &lon, &lat, &up, &down, &r);
-                }
-            }
-        }  
-        newdp = antiform_2(velocity, output, lon, lat, up, down, r);
     }else if (strcmp(type, "synform") == 0){
         printf("type is %s\n", type);
         for (i=1; !error && i < argc; i++) {
@@ -105,16 +82,6 @@ int main (int argc, char **argv) {
             }
         } 
         newdp = synform(velocity, output, lon, lat, up, r);
-    }else if (strcmp(type, "synform_2") == 0){
-        printf("type is %s\n", type);
-        for (i=1; !error && i < argc; i++) {
-            if (argv[i][0] == '-') {
-                if (argv[i][1] == 'T'){
-                    sscanf(&argv[i][2],"%f/%f/%f/%f/%f\n", &lon, &lat, &up, &down, &r);
-                }
-            }
-        }  
-        newdp = synform_2(velocity, output, lon, lat, up, down, r); 
     }else if (strcmp(type, "fault") == 0){
         printf("type is %s\n", type);
         for (i=1; !error && i < argc; i++) {
