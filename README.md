@@ -14,3 +14,15 @@ Here is a brief overview of what each program does:
 * slope.c - Generates the slope structure.  
 * fault.c - Generates the fault structure.  
 * syn_moho - The main program, capable of designing complex structures.  
+
+### Usage
+
+To use 'syn_moho', run the command in the following format:  
+./syn_moho -P$type -V$vel -Ooutput.txt -Ddepth
+
+### Parameters
+
+* -P : Specify the structure you want (options include: antiform, synform, offset, slope, and fault).
+* -V : Input velocity model that will be used to generate the synthetic receiver functions.
+* -O : Output velocity models. The format is: moho depth, vp, vp/vs \ moho depth + 1, vp, vp/vs.
+* -D : The output Moho depth.
