@@ -27,4 +27,4 @@ Intp.o: Intp.c
 	gcc -c Intp.c
   
 clean: 
-      
+      rm -f *.o
