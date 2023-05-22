@@ -83,7 +83,6 @@ for i in range(1):
     tr1 = inv
     tr2 = inv + inv/5
     
-    print(tr1)
     indices = np.arange(0, len(X))
     np.random.default_rng(i)
     np.random.shuffle(indices)
@@ -105,10 +104,8 @@ for i in range(1):
 
     XGBMSE = mean_squared_error(XGBEst, y_test)
     XGBPercentLoss = mean_absolute_error(XGBEst, y_test)
-    
     XGBMSEList.append(XGBMSE)
     XGBPercentLossList.append(XGBPercentLoss)
-
         
     print("Round %d, ForestMSE:%.3f, ForestPercentLoss:%.3f" % (i, XGBMSE, XGBPercentLoss))
     
@@ -125,7 +122,7 @@ for i in range(1):
     MyXGB.fit(X_train, y_train, eval_set=[(X_train, y_train)])
     
     # test on the same testing set
-    XGBEst     = MyXGB.predict(X_test)
+    XGBEst = MyXGB.predict(X_test)
     
     # calculate the accuracy of two models
     XGBMSE = mean_squared_error(XGBEst, y_test)
@@ -150,7 +147,7 @@ for i in range(1):
     MyXGB.fit(X_train, y_train, eval_set=[(X_train, y_train)])
     
     # test on the same testing set
-    XGBEst     = MyXGB.predict(X_test)
+    XGBEst = MyXGB.predict(X_test)
     
     # calculate the accuracy of two models
     XGBMSE = mean_squared_error(XGBEst, y_test)
@@ -200,7 +197,7 @@ for i in range(1):
     MyXGB.fit(X_train, y_train, eval_set=[(X_train, y_train)])
     
     # test on the same testing set
-    XGBEst     = MyXGB.predict(X_test)
+    XGBEst = MyXGB.predict(X_test)
     
     # calculate the accuracy of two models
     XGBMSE = mean_squared_error(XGBEst, y_test)
