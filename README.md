@@ -30,7 +30,7 @@ To use 'syn_moho', run the command in the following format:
 ### Getting Started
 
 First, compile the code using the provided Makefile:  
-** make syn_moho **  
+*make syn_moho*  
 Then, run syn_moho with the desired parameters.
 
 ### Dependencies
