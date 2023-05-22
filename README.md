@@ -8,9 +8,9 @@ Welcome to the 'SynRF-generator' repository. This project contains a suite of co
 ### Code Structure
 
 Here is a brief overview of what each program does:  
-*antiform.c - Generates the antiform structure.  
-*synform.c - Generates the synform structure.  
-*offset.c - Generates the offset structure.  
-*slope.c - Generates the slope structure.  
-*fault.c - Generates the fault structure.  
-*syn_moho - The main program, capable of designing complex structures.  
+* antiform.c - Generates the antiform structure.  
+* synform.c - Generates the synform structure.  
+* offset.c - Generates the offset structure.  
+* slope.c - Generates the slope structure.  
+* fault.c - Generates the fault structure.  
+* syn_moho - The main program, capable of designing complex structures.  
