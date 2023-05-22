@@ -26,3 +26,22 @@ To use 'syn_moho', run the command in the following format:
 * -V : Input velocity model that will be used to generate the synthetic receiver functions.
 * -O : Output velocity models. The format is: moho depth, vp, vp/vs \ moho depth + 1, vp, vp/vs.
 * -D : The output Moho depth.
+
+### Getting Started
+
+First, compile the code using the provided Makefile:  
+** make syn_moho **  
+Then, run syn_moho with the desired parameters.
+
+### Dependencies
+
+This project requires a Unix-like system with a C compiler.
+
+### Contact
+
+Please reach out if you have any questions or encounter issues using the tool. You can reach me via email at  
+yitanwang@ufl.edu
+
+### License
+
+The code in this project is licensed under the MIT license.
